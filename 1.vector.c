@@ -81,7 +81,7 @@ int insert(Vector *v, int val, int ind) {
     if (ind < 0 || ind > v->length) {
         return 0;
     }
-    for (int i = v->length - 1; i > 0; i--) {
+    for (int i = v->length - 1; i > ind; i--) {
         v->data[i + 1] = v->data[i];
     }
     v->data[ind] = val;
